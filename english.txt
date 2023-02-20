@@ -1,0 +1,7 @@
+programm
+list
+check
+found
+compiler
+language
+algoritm
