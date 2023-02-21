@@ -1,10 +1,10 @@
-from fnmatch import translate
+
 from mymodul import*
 laused=["hi guys"]
 russian=[]
 english=[]
 while True:
-    v=int(input("1-loeme failis\n2 - tarnslite sona\n3-lisa sona \n4-muuda sona"))
+    v=int(input("1-loeme failis\n2 - tarnslite sona\n3-lisa sona \n4-muuda sona \n5-test"))
     if v==1:
         russian=loe_faelist("russian.txt")
         for line in russian:
@@ -20,6 +20,8 @@ while True:
         russian, english=addsona(russian, english)
     elif v==4:
         russian, english=mudasona(russian, english)
+    elif v==5:
+        russian, english=test(russian, english)
 
 #    elif v==2:
 #        line=input("Lisa lause: ")

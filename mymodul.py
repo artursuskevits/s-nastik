@@ -1,3 +1,4 @@
+from random import*
 def loe_faelist(fail:str)->list:
     """
     """
@@ -71,3 +72,25 @@ def mudasona (r:list,e:list):
                 r.insert(jj, sonachange)
                 break
     return r, e
+
+def test (r:list,e:list):
+    oige = 0
+    koik = 0
+    rr=len(e)
+    kuipalju=int(input("kui plaju sonad te tahate testiga,max7))))"))
+    if kuipalju <=7:
+        for j in range (kuipalju):
+            random_word=choice(e)
+            for jj in range (rr):
+                if random_word == e[jj]:
+                    answer=input(f"tõlgi {random_word} vene keelde")
+                    if answer == r[jj]:
+                        koik +=1
+                        oige +=1
+                    else:
+                        koik +=1
+    result = oige/koik * 100
+    print(f"see reult on {result}%")
+    return r, e
+
+
