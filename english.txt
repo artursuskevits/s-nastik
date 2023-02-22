@@ -1,7 +1,10 @@
-programm
+﻿programm
 list
 check
 found
 compiler
 language
-algoritm
+algorithm
+computer
+query
+terminal

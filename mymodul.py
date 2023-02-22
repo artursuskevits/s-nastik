@@ -15,12 +15,11 @@ def Kirjuta_failise(fail:str,jarjend:list):
         f.write(line+"\n")
     f.close()
 
-from distutils.command.sdist import sdist
 from gtts import gTTS
 import os
 def Heli(text:str, keel:str):
-    obj=gTTS(text=text, lang=keel,slow=False).save("heli.mp3")
-    os.system("heli.mp3")
+    obj=gTTS(text=text, lang=keel,slow=False).save("heli2.mp3")
+    os.system("heli2.mp3")
 
 def translate(r:list,e:list):
     rr=len(e)
@@ -93,4 +92,18 @@ def test (r:list,e:list):
     print(f"see reult on {result}%")
     return r, e
 
-
+def choose_sona(r:list, e:list):
+    language = int(input("millises keeles soovite sõna kuulda 1-inglise keeles 2-venekeelses keeles"))
+    rr = len(e)
+    if language == 1:
+        print(e)
+        sona = input("Kirjutage sõna, mida soovite kuulda")
+        for jj in range(rr):
+            if sona == e[jj]:
+                return sona
+    elif language == 2:
+        print(r)
+        sona = input("Kirjutage sõna, mida soovite kuulda")
+        for jj in range(rr):
+            if sona == r[jj]:
+                return sona

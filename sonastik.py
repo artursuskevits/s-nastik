@@ -1,19 +1,24 @@
 
 from mymodul import*
-laused=["hi guys"]
+laused=[]
 russian=[]
 english=[]
+russian=loe_faelist("russian.txt")
+print(russian)
+english=loe_faelist("english.txt")
+print(english)
 while True:
-    v=int(input("1-loeme failis\n2 - tarnslite sona\n3-lisa sona \n4-muuda sona \n5-test"))
+    v=int(input("1-add all changes in txt file\n2 - tarnslite sona\n3-lisa sona \n4-muuda sona \n5-test \n6 kuula sona"))
     if v==1:
-        russian=loe_faelist("russian.txt")
-        for line in russian:
-            print(line)
-        print(russian)
-        english=loe_faelist("english.txt")
-        for line in english:
-            print(line)
-        print(english)
+        for jj in range (len(russian)):
+            line=russian[jj]
+            laused.append(line)
+        Kirjuta_failise("russian.txt",laused)
+        laused=[]
+        for j in range (len(english)):
+            line=english[j]
+            laused.append(line)
+        Kirjuta_failise("english.txt",laused)
     elif v==2:
         russian, english=translate(russian, english)
     elif v==3:
@@ -22,17 +27,22 @@ while True:
         russian, english=mudasona(russian, english)
     elif v==5:
         russian, english=test(russian, english)
-
-#    elif v==2:
-#        line=input("Lisa lause: ")
-#        laused.append(line)
-#        Kirjuta_failise("laused.txt",laused)
-#    elif v==3:
-#        text=""
-#        for line in laused:
-#            text=text+" "+line
-#        #text : kõik elemendis järjendis
-#        ind=int(input("Number: "))
-#        Heli(laused[ind],"et")
+        for jj in range (len(russian)):
+            line=russian[jj]
+            laused.append(line)
+        Kirjuta_failise("laused.txt",laused)
+    elif v==6:
+        laused=[]
+        sona = choose_sona(russian, english)
+        for jj in range (len(russian)):
+            if sona == english[jj]:
+                text = sona
+                laused.append(text)
+                #text : kõik elemendis järjendis
+                Heli(laused[0],"en")
+        text = sona
+        laused.append(text)
+        #text : kõik elemendis järjendis
+        Heli(laused[0],"ru")
 
         
