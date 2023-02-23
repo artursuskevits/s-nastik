@@ -20,11 +20,11 @@ while True:
             laused.append(line)
         Kirjuta_failise("english.txt",laused)
     elif v==2:
-        russian, english=translate(russian, english)
+        tolk2(russian, english)
     elif v==3:
         russian, english=addsona(russian, english)
     elif v==4:
-        russian, english=mudasona(russian, english)
+        russian, english=mudasona2(russian, english)
     elif v==5:
         russian, english=test(russian, english)
         for jj in range (len(russian)):

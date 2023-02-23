@@ -103,3 +103,31 @@ def choose_sona(r:list, e:list):
         for jj in range(rr):
             if sona == r[jj]:
                 return sona
+
+
+def tolk2 (r:list,e:list):
+    sona=input("kirjutage sõna, mida tõlgide")
+    if sona in r:
+        ind=r.index(sona)
+        print(f"{sona} on inglise {e[ind]}")
+    elif sona in e:
+        ind=e.index(sona)
+        print(f"{sona} on vene {r[ind]}")
+    else:
+        v=int(input("sõnad, mida sõnaraamatus ei ole, kas soovite seda lisada? (print_1)"))
+        if v == 1:
+            addsona(r,e)
+
+def mudasona2 (r:list,e:list): 
+    sona=input("kirjutage sõna, mida soovite muuta")
+    if sona in r:
+        sonachange=input("kirjutage muudetud sõna")
+        ind=r.index(sona)
+        e.pop(ind)
+        e.insert(ind, sonachange)
+    elif sona in e:
+        sonachange=input("kirjutage muudetud sõna")
+        ind=e.index(sona)
+        e.pop(ind)
+        e.insert(ind, sonachange)
+    return r,e
