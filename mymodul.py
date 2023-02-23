@@ -76,7 +76,7 @@ def test (r:list,e:list):
     oige = 0
     rr=len(e)
     kuipalju=int(input(f"kui plaju sonad te tahate testiga,max{len(e)}))))"))
-    if kuipalju <=7:
+    if kuipalju <= len(e):
         for j in range (kuipalju):
             random_word=choice(e)
             for jj in range (rr):
