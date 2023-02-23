@@ -74,9 +74,8 @@ def mudasona (r:list,e:list):
 
 def test (r:list,e:list):
     oige = 0
-    koik = 0
     rr=len(e)
-    kuipalju=int(input("kui plaju sonad te tahate testiga,max7))))"))
+    kuipalju=int(input(f"kui plaju sonad te tahate testiga,max{len(e)}))))"))
     if kuipalju <=7:
         for j in range (kuipalju):
             random_word=choice(e)
@@ -84,11 +83,8 @@ def test (r:list,e:list):
                 if random_word == e[jj]:
                     answer=input(f"tõlgi {random_word} vene keelde")
                     if answer == r[jj]:
-                        koik +=1
                         oige +=1
-                    else:
-                        koik +=1
-    result = oige/koik * 100
+    result = oige/kuipalju * 100
     print(f"see reult on {result}%")
     return r, e
 
