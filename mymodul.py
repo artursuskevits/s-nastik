@@ -75,7 +75,7 @@ def mudasona (r:list,e:list):
 def test (r:list,e:list):
     oige = 0
     rr=len(e)
-    kuipalju=int(input(f"kui plaju sonad te tahate testiga,max{len(e)}))))"))
+    kuipalju=int(input(f"kui plaju sonad te tahate testiga,max{len(e)})))"))
     if kuipalju <= len(e):
         for j in range (kuipalju):
             random_word=choice(e)
